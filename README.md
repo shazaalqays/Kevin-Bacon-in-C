@@ -77,3 +77,11 @@ Using techniques mentioned above code will be run through the algorithm below:
 -	After giving an actor name we search in our lookup table for the given actor name by using hashing algorithm, then trying to find the path between given actor name and bacon, if the path is found we return the names of actors linking our actor to bacon with bacon number, otherwise we consider the actor is infinite far away from bacon.
 ```
 # Results
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex1.jpg) <br/><br/>
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex2.jpg) <br/><br/>
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex3.jpg) <br/><br/>
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex4.jpg) <br/><br/>
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex5.jpg) <br/><br/>
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex6.jpg) <br/><br/>
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex7.jpg) <br/><br/>
+![Result5](https://github.com/shazaalqays/Kevin-Bacon-in-C/blob/main/images/ex8.jpg) <br/><br/>
