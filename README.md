@@ -1,26 +1,26 @@
 # Kevin-Bacon
-Six Degrees of Kevin Bacon or "Bacon's Law" is a parlour game based on the "six degrees of separation" concept, which posits that any two people on Earth are six or fewer acquaintance links apart. Movie buffs challenge each other to find the shortest path between an arbitrary actor and prolific actor Kevin Bacon. It rests on the assumption that anyone involved in the Hollywood film industry can be linked through their film roles to Bacon within six steps.
-The Bacon number of an actor is the number of degrees of separation he or she has from Bacon, as defined by the game. This is an application of the Erdős number concept to the Hollywood movie industry. The higher the Bacon number, the greater the separation from Kevin Bacon the actor is.
-The computation of a Bacon number for actor X is a "shortest path" algorithm, applied to the co-stardom network:
-•	Kevin Bacon himself has a Bacon number of 0.
-•	Those actors who have worked directly with Kevin Bacon have a Bacon number of 1.
-•	If the lowest Bacon number of any actor with whom X has appeared in any movie is N, X's Bacon number is N+1.
+Six Degrees of Kevin Bacon or "Bacon's Law" is a parlour game based on the "six degrees of separation" concept, which posits that any two people on Earth are six or fewer acquaintance links apart. Movie buffs challenge each other to find the shortest path between an arbitrary actor and prolific actor Kevin Bacon. It rests on the assumption that anyone involved in the Hollywood film industry can be linked through their film roles to Bacon within six steps.<br/>
+The Bacon number of an actor is the number of degrees of separation he or she has from Bacon, as defined by the game. This is an application of the Erdős number concept to the Hollywood movie industry. The higher the Bacon number, the greater the separation from Kevin Bacon the actor is.<br/>
+The computation of a Bacon number for actor X is a "shortest path" algorithm, applied to the co-stardom network:<br/>
+•	Kevin Bacon himself has a Bacon number of 0.<br/>
+•	Those actors who have worked directly with Kevin Bacon have a Bacon number of 1.<br/>
+•	If the lowest Bacon number of any actor with whom X has appeared in any movie is N, X's Bacon number is N+1.<br/>
 
 # Examples
-Elvis Presley:
-•	Elvis Presley was in Change of Habit (1969) with Edward Asner
-•	Edward Asner was in JFK (1991) with Kevin Bacon
-Therefore, Asner has a Bacon number of 1, and Presley (who never appeared in a film with Bacon) has a Bacon number of 2.
+Elvis Presley:<br/>
+•	Elvis Presley was in Change of Habit (1969) with Edward Asner<br/>
+•	Edward Asner was in JFK (1991) with Kevin Bacon<br/>
+Therefore, Asner has a Bacon number of 1, and Presley (who never appeared in a film with Bacon) has a Bacon number of 2.<br/>
 <br/><br/>
-Ian McKellen:
-•	Ian McKellen was in X-Men: Days of Future Past (2014) with Michael Fassbender and James McAvoy
-•	McAvoy and Fassbender were in X-Men: First Class (2011) with Kevin Bacon
-Therefore, McAvoy and Fassbender have Bacon numbers of 1, and McKellen has a Bacon number of 2.
+Ian McKellen:<br/>
+•	Ian McKellen was in X-Men: Days of Future Past (2014) with Michael Fassbender and James McAvoy<br/>
+•	McAvoy and Fassbender were in X-Men: First Class (2011) with Kevin Bacon<br/>
+Therefore, McAvoy and Fassbender have Bacon numbers of 1, and McKellen has a Bacon number of 2.<br/>
 Because some people have both a finite Bacon and a finite Erdős number because of acting and publications, there are a rare few who have a finite Erdős–Bacon number, which is defined as the sum of a person's independent Erdős and Bacon numbers.
 
 # Hashing
-A hash function is any function that can be used to map data of arbitrary size to fixed-size values. The values returned by a hash function are called hash values, hash codes, digests, or simply hashes. The values are used to index a fixed-size table called a hash table. Use of a hash function to index a hash table is called hashing or scatter storage addressing.
-Hash functions and their associated hash tables are used in data storage and retrieval applications to access data in a small and nearly constant time per retrieval, and storage space only fractionally greater than the total space required for the data or records themselves. Hashing is a computationally and storage space efficient form of data access which avoids the non-linear access time of ordered and unordered lists and structured trees, and the often exponential storage requirements of direct access of state spaces of large or variable-length keys.
+A hash function is any function that can be used to map data of arbitrary size to fixed-size values. The values returned by a hash function are called hash values, hash codes, digests, or simply hashes. The values are used to index a fixed-size table called a hash table. Use of a hash function to index a hash table is called hashing or scatter storage addressing.<br/>
+Hash functions and their associated hash tables are used in data storage and retrieval applications to access data in a small and nearly constant time per retrieval, and storage space only fractionally greater than the total space required for the data or records themselves. Hashing is a computationally and storage space efficient form of data access which avoids the non-linear access time of ordered and unordered lists and structured trees, and the often exponential storage requirements of direct access of state spaces of large or variable-length keys.<br/>
 A hash function takes as input a key, which is associated with a datum or record and used to identify it to the data storage and retrieval application. The keys may be fixed length, like an integer, or variable length, like a name. In some cases, the key is the datum itself. The output is a hash code used to index a hash table holding the data or records, or pointers to them.
 <br/>
 Hash functions are used in conjunction with hash tables to store and retrieve data items or data records. The hash function translates the key associated with each datum or record into a hash code which is used to index the hash table. When an item is to be added to the table, the hash code may index an empty slot (also called a bucket), in which case the item is added to the table there. If the hash code indexes a full slot, some kind of collision resolution is required: the new item may be omitted (not added to the table), or replace the old item, or it can be added to the table in some other location by a specified procedure. That procedure depends on the structure of the hash table: In chained hashing, each slot is the head of a linked list or chain, and items that collide at the slot are added to the chain. Chains may be kept in random order and searched linearly, or in serial order, or as a self-ordering list by frequency to speed up access. In open address hashing, the table is probed starting from the occupied slot in a specified manner, usually by linear probing, quadratic probing, or double hashing until an open slot is located or the entire table is probed (overflow). Searching for the item follows the same procedure until the item is located, an open slot is found or the entire table has been searched (item not in table).
@@ -47,27 +47,26 @@ Output: Goal state. The parent links trace the shortest path back to root
 11                 label w as discovered
 12                 w.parent = v
 13                 Q.enqueue(w) 
-
 ```
-# Time complexity
 
+# Time complexity
 Hashing: Using linear probing, dictionary operations can be implemented in constant expected time. In other words, insert, remove and search operations can be implemented in O(1), as long as the load factor of the hash table is a constant strictly less than one.
 <br/>
 BFS: 
-Worst-Case Time Complexity (Double Hashing)
-•	Find: O(n) — If we are extremely unlucky, we may have to probe over all n elements
-•	Insert: O(n) — If we are extremely unlucky, we may have to probe over all n elements
-•	Remove: O(n) — If we are extremely unlucky, we may have to probe over all n elements
+Worst-Case Time Complexity (Double Hashing)<br/>
+•	Find: O(n) — If we are extremely unlucky, we may have to probe over all n elements<br/>
+•	Insert: O(n) — If we are extremely unlucky, we may have to probe over all n elements<br/>
+•	Remove: O(n) — If we are extremely unlucky, we may have to probe over all n elements<br/>
 <br/>
-Average-Case Time Complexity (Double Hashing)
-•	Find: O(1) — The formal proof is too complex for a summary slide
-•	Insert: O(1) — The formal proof is too complex for a summary slide
-•	Remove: O(1) — The formal proof is too complex for a summary slide
+Average-Case Time Complexity (Double Hashing)<br/>
+•	Find: O(1) — The formal proof is too complex for a summary slide<br/>
+•	Insert: O(1) — The formal proof is too complex for a summary slide<br/>
+•	Remove: O(1) — The formal proof is too complex for a summary slide<br/>
 <br/>
-Best-Case Time Complexity (Double Hashing)
-•	Find: O(1) — No collisions
-•	Insert: O(1) — No collisions
-•	Remove: O(1) — No collisions
+Best-Case Time Complexity (Double Hashing)<br/>
+•	Find: O(1) — No collisions<br/>
+•	Insert: O(1) — No collisions<br/>
+•	Remove: O(1) — No collisions<br/>
 
 # Algorithm of the code
 
